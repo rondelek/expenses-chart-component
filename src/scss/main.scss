@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700&display=swap');
+@import './variables';
+@import './mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Kumbh Sans';
+    background-color: $cream;
+}
+
+main {
+    @include setFlex(column);
+    min-height: 100vh;
+}
+
+.container {
+    min-width: 30vw;
+    max-width: 65vw;
+    max-width: 400px;
+}
+
+.balance {
+    display: flex;
+    color: white;
+    background-color: $softRed;
+    margin-bottom: 20px;
+
+    &__txt {
+        @include setFlex(column, center, left);
+        justify-self: flex-start;
+        margin-right: auto;
+        gap: 5px;
+
+        &__text {
+            font-size: .8rem;
+        }
+
+        &__sum {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+}
+
+.hero {
+    @include setFlex;
+    justify-content: space-between;
+    background-color: $paleOrange;
+    gap: 20px;
+
+    h1 {
+        padding-bottom: 30px;
+    }
+}
+
+.chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1vw;
+
+    .bars {
+        @include setFlex;
+        gap: 1vh;
+
+        .bar {
+            position: relative;
+            min-width: 40px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                opacity: .8;
+
+                &::before {
+                    content: attr(stats);
+                    position: absolute;
+                    top: -30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.95);
+                    font-size: small;
+                    background-color: $darkBrown;
+                    border-radius: 5px;
+                    padding: 5px 5px;
+                }
+            }
+        }
+    }
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__numbers {
+        display: flex;
+
+        &__sum {
+            justify-self: flex-start;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-right: auto;
+        }
+
+        &__month {
+            &__plus{
+                font-size: .8rem;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.box {
+    display: flex;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.brown-small {
+    color: $mediumBrown;
+    font-size: .8rem;
+}
+
+.cyan {
+    background-color: $cyan;
+}
+
+.red {
+    background-color: $softRed;
+}
+
+.active {
+    display: block;
+}
+
+hr {
+    width: 100%;
+    opacity: .2;
+}
+
+@media screen and (max-width: 540px) {
+    .chart {
+        .bars {
+            .bar {
+                min-width: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .chart {
+        .bars {
+            .bar {
+                min-width: 25px;
+            }
+        }
+    }
+}

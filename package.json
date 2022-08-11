@@ -1,0 +1,29 @@
+{
+  "name": "expenses-chart",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass src/scss/main.scss src/css/style.css -w",
+    "start": "parcel ./src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:scss": "node-sass src/scss/main.scss src/css/style.comp.css",
+    "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
+    "devserver": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "node-sass": "^7.0.1",
+    "parcel": "^2.7.0",
+    "scss": "^0.2.4"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  },
+  "description": "![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)"
+}

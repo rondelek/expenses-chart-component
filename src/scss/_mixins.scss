@@ -1,0 +1,14 @@
+@mixin setFlex($flex-direction: column, $justify-content: center, $align-items: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin setFlexColLeft($gap: 20px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    gap: $gap;
+}

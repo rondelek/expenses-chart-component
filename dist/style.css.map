@@ -1,0 +1,1 @@
+{"mappings":";AACA","sources":["src/css/style.css"],"sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700&display=swap\");\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n"],"names":[],"version":3,"file":"style.css.map","sourceRoot":"/__parcel_source_root/"}
